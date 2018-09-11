@@ -1,0 +1,7 @@
+{
+  "name": "ion2-basics",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
