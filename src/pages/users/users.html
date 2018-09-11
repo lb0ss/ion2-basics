@@ -8,9 +8,11 @@
 
 
 <ion-content padding>
-  <button ion-button>User 'Terrence'</button>
+  <button ion-button (click)="onLoadUser('terrence')">User 'Terrence'</button>
   <hr>
-  <button ion-button>User 'Anna'</button>
+  <button ion-button (click)="onLoadUser('anna')">User 'Anna'</button>
+  <hr>
+  <button ion-button navPop>Go Back</button>
 </ion-content>
 
 <ion-footer padding>
