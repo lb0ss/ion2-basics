@@ -13,6 +13,30 @@ export class UsersPage {
   onLoadUser(name: string) {
     this.navCtrl.push(UserPage, name);
   }
+  
+  ionViewCanEnter(): boolean | Promise<boolean> {
+    console.log("ionviewcanenter");
+    const rnd = Math.random();
+    return rnd > 0.1 
+  }
+
+  ionViewDidLoad() {
+    console.log('ionviewdidload')
+  }
+
+  ionViewWillEnter() {
+
+  }
+
+  ionViewCanLeave(): boolean | Promise<void> {
+    const promise = new Promise((resolve, reject) => {
+      setTimeout(() => 
+      { 
+        resolve(); 
+      }, 1000)
+    })
+    return true;
+  }
 
   // more options to pass to navCtrl:
 //   this.navCtrl.push(NewPage, {}, {
